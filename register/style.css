@@ -55,6 +55,7 @@ label {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
+
 .name-child input,
 input {
   color: black;
@@ -84,7 +85,8 @@ input {
 .address-child input:focus,
 .district-child input:focus,
 .number-child input:focus,
-.password-box input:focus #email-row input:focus {
+.password-box input:focus, 
+#email-row input:focus {
   box-shadow: 0 0 12px #4facfe;
 }
 #email-row,
@@ -163,6 +165,9 @@ input {
 #register span a:hover {
   color: white;
 }
+#terms p{
+  margin-left: 5px;
+}
 .meu-swal-popup {
   background: rgba(0, 0, 60, 0.75) !important;
   border-radius: 16px !important;
@@ -225,5 +230,52 @@ input {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@media screen and (max-width: 768px) {
+  form#register {
+    line-height: 1.2rem;
+    width: 90%;
+  }
+  form#register input[type="text"] {
+    width: 100%;  
+  }
+  #name-row, #address-row{
+    flex-direction: column;
+  }
+  #terms {
+    margin-top: 0 !important;
+  }
+  #terms p {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1024px) {
+  form#register {
+    line-height: 1.2rem;
+    width: 90%;
+  }
+  form#register input[type="text"] {
+    width: 100%;  
+  }
+  #name-row, #address-row{
+    flex-direction: column;
+  }
+  #terms {
+    margin-top: 0 !important;
+  }
+  #terms p {
+    margin-left: 3px;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1600px) {
+  #name-row {
+    flex-direction: column;
+  }
+  #name-row input[type="text"] {
+    width: 100%;  
   }
 }
