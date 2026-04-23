@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #0d0680 no-repeat fixed url(blue-background.png);
+  background-size: cover;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#container form {
+  background: rgba(0, 0, 60, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(10.6px);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 30%;
+  height: 100%;
+  margin: 15% 11rem;
+}
+#email, #senha {
+    display: flex;
+    flex-direction: column;
+}
+#senha {
+    margin-top: 2rem;
+}
+
+#container form label {
+    font-size: 1.5rem;
+}
+#container #passwordReveal label{
+  font-size: 1.3rem;
+}
+#container form input {
+    margin-top: 0.4rem;
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    outline: none;
+}
+#container form input:focus {
+  box-shadow: 0 0 12px #4facfe;
+}
+#senha span, a {
+    transition: 0.2s;
+    color: white;
+}
+#extra a:hover  {
+    color: rgb(0, 55, 255);
+}
+#container button {
+  margin: 3rem auto 3rem auto;
+  height: 3rem;
+  width: 50%;
+  border-radius: 0.5rem;
+  border: 0;
+  transition: color 0.3s, background-color 0.3s;
+  font-size: 1.2rem;
+}
+#container span, #container span a {
+  color: rgba(255, 255, 255, 0.945);
+  text-align: center;
+}
+form button:hover {
+  cursor: pointer;
+  background-color: #132CAD;
+  color: white;
+}
+form #extra {
+  display: flex;
+  justify-content: space-evenly;
+}
+#hero-section {
+  width: 40%;
+  color: white;
+  margin: 0 auto 2.5% auto;
+}
+#cards {
+  display: flex;
+  gap: 5%;
+  
+}
+.card {
+  background: rgba(0, 0, 60, 0.412);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(98, 98, 98, 0.4);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(10.6px);
+  padding: 2rem;
+  width: 15rem;
+  height: 11rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
