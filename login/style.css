@@ -2,9 +2,10 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
   background: #0d0680 no-repeat fixed url(blue-background.png);
@@ -106,4 +107,29 @@ form #extra {
   margin-top: 2rem;
   text-align: center;
   font-size: 1.3rem;
+}
+@media screen and (max-width: 768px) {
+  #container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #login-box {
+    width: 90% !important;
+    padding: 1rem !important;
+    
+  }
+  #cards {
+    flex-direction: column; 
+  }
+  #hero-section {
+    width: 90%;
+    font-size: 0.rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 1600px) {
+
 }
