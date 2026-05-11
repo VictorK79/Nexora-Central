@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suporte | Nexora</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="site-header">
+      <div id="header-inner">
+        <a href="../dashboard/index.html" id="logo">Nexora</a>
+        <nav id="header-nav">
+          <a href="../dashboard/index.html">Dashboard</a>
+          <a href="index.html" class="ativo">Suporte</a>
+        </nav>
+      </div>
+    </header>
+    <section id="hero">
+      <h1>Como podemos ajudar?</h1>
+      <p>Encontre respostas rápidas ou entre em contato com nossa equipe.</p>
+      <div id="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Descreva sua dúvida..."
+          autocomplete="off"
+          aria-label="Pesquisar dúvidas"
+        />
+      </div>
+      <p id="search-empty" aria-live="polite"></p>
+    </section>
+    <section id="categories">
+      <button class="cat-btn ativo" data-cat="todos">Todos</button>
+      <button class="cat-btn" data-cat="matricula">Matrícula</button>
+      <button class="cat-btn" data-cat="pagamento">Pagamento</button>
+      <button class="cat-btn" data-cat="cursos">Cursos</button>
+      <button class="cat-btn" data-cat="certificado">Certificados</button>
+      <button class="cat-btn" data-cat="conta">Conta</button>
+      <button class="cat-btn" data-cat="tecnico">Técnico</button>
+    </section>
+
+
+    <main id="faq-section">
+
+      <article class="faq-card" data-cat="matricula">
+        <div class="faq-icon"><i class="fa-solid fa-user-graduate"></i></div>
+        <h2>Matrícula</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Como me matricular em um curso?</summary>
+            <p>Acesse o catálogo de cursos no dashboard, escolha o curso desejado e clique em "Matricular-se". Você receberá uma confirmação por e-mail em até 24 horas.</p>
+          </details>
+          <details>
+            <summary>Posso me matricular em mais de um curso ao mesmo tempo?</summary>
+            <p>Sim. Não há limite de matrículas simultâneas, desde que as grades horárias dos cursos presenciais não se sobreponham.</p>
+          </details>
+          <details>
+            <summary>Como cancelo uma matrícula?</summary>
+            <p>O cancelamento pode ser feito em até 7 dias após a matrícula sem custo. Após esse prazo, consulte nossa política de cancelamento na seção de pagamento.</p>
+          </details>
+          <details>
+            <summary>Existe prazo para realizar a matrícula?</summary>
+            <p>Cada curso possui seu próprio período de inscrição, indicado na página do curso. Fique atento às datas no dashboard.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="faq-card" data-cat="pagamento">
+        <div class="faq-icon"><i class="fa-solid fa-credit-card"></i></div>
+        <h2>Pagamento</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Quais formas de pagamento são aceitas?</summary>
+            <p>Aceitamos cartão de crédito (até 12x), cartão de débito, Pix e boleto bancário.</p>
+          </details>
+          <details>
+            <summary>Meu pagamento foi recusado. O que fazer?</summary>
+            <p>Verifique os dados do cartão, o limite disponível e tente novamente. Se o problema persistir, entre em contato com seu banco ou utilize outra forma de pagamento.</p>
+          </details>
+          <details>
+            <summary>Como solicitar reembolso?</summary>
+            <p>Reembolsos podem ser solicitados em até 7 dias corridos após o pagamento, desde que o acesso ao conteúdo não tenha sido utilizado. Acesse "Minha Conta → Pagamentos → Solicitar Reembolso".</p>
+          </details>
+          <details>
+            <summary>Onde encontro o boleto ou comprovante de pagamento?</summary>
+            <p>Todos os comprovantes ficam disponíveis em "Minha Conta → Pagamentos". Você também os recebe por e-mail no momento da compra.</p>
+          </details>
+          <details>
+            <summary>O parcelamento tem juros?</summary>
+            <p>Parcelamentos em até 3x são sem juros. A partir da 4ª parcela, aplicamos uma taxa de 1,99% ao mês.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="faq-card" data-cat="cursos">
+        <div class="faq-icon"><i class="fa-solid fa-book-open"></i></div>
+        <h2>Cursos</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Por quanto tempo tenho acesso ao conteúdo?</summary>
+            <p>Para cursos livres, o acesso é de 12 meses após a matrícula. Para graduação e pós-graduação, o acesso se mantém durante toda a duração do programa.</p>
+          </details>
+          <details>
+            <summary>Os cursos têm aulas ao vivo ou são gravados?</summary>
+            <p>Oferecemos ambos os formatos. Cada curso indica na sua página se é 100% gravado, híbrido (gravado + ao vivo) ou presencial.</p>
+          </details>
+          <details>
+            <summary>Posso baixar as aulas para assistir offline?</summary>
+            <p>Sim. O app Nexora permite o download das aulas para dispositivos móveis. No computador, o conteúdo é disponibilizado apenas online.</p>
+          </details>
+          <details>
+            <summary>Como funciona a pós-graduação?</summary>
+            <p>Nossa pós-graduação é reconhecida pelo MEC. A duração varia entre 6 e 18 meses dependendo do programa. O acesso é 100% online com encontros síncronos quinzenais.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="faq-card" data-cat="certificado">
+        <div class="faq-icon"><i class="fa-solid fa-certificate"></i></div>
+        <h2>Certificados</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Quando recebo meu certificado?</summary>
+            <p>O certificado é emitido automaticamente em até 48 horas após a conclusão de todas as atividades e a nota mínima de aprovação (60%).</p>
+          </details>
+          <details>
+            <summary>O certificado é reconhecido pelo MEC?</summary>
+            <p>Os certificados de graduação e pós-graduação são reconhecidos pelo MEC. Cursos livres e de extensão emitem declaração de conclusão com carga horária.</p>
+          </details>
+          <details>
+            <summary>Como valido meu certificado?</summary>
+            <p>Cada certificado possui um código de validação único. Acesse <strong>nexora.com/validar</strong> e insira o código para confirmar a autenticidade.</p>
+          </details>
+          <details>
+            <summary>Posso emitir segunda via do certificado?</summary>
+            <p>Sim. Acesse "Minha Conta → Certificados" e clique em "Baixar" a qualquer momento.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="faq-card" data-cat="conta">
+        <div class="faq-icon"><i class="fa-solid fa-circle-user"></i></div>
+        <h2>Conta</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Como altero meus dados cadastrais?</summary>
+            <p>Acesse "Minha Conta → Perfil → Editar dados". Alterações no CPF ou data de nascimento requerem envio de documento via suporte.</p>
+          </details>
+          <details>
+            <summary>Esqueci minha senha. Como recupero?</summary>
+            <p>Na tela de login, clique em "Esqueci minha senha" e informe seu e-mail. Você receberá as instruções de redefinição.</p>
+          </details>
+          <details>
+            <summary>Posso transferir minha conta para outra pessoa?</summary>
+            <p>Não. As contas são pessoais e intransferíveis conforme nossos termos de uso.</p>
+          </details>
+          <details>
+            <summary>Como excluo minha conta?</summary>
+            <p>Solicite a exclusão em "Minha Conta → Configurações → Excluir conta". Dados são removidos em até 30 dias conforme a LGPD.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="faq-card" data-cat="tecnico">
+        <div class="faq-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h2>Técnico</h2>
+        <div class="faq-list">
+          <details>
+            <summary>O vídeo não carrega. O que fazer?</summary>
+            <p>Tente limpar o cache do navegador, desabilitar extensões ou utilizar outro navegador. Verifique também se sua conexão atinge pelo menos 5 Mbps.</p>
+          </details>
+          <details>
+            <summary>Quais navegadores são suportados?</summary>
+            <p>Chrome, Firefox, Edge e Safari nas duas últimas versões. Internet Explorer não é suportado.</p>
+          </details>
+          <details>
+            <summary>O site está fora do ar. O que faço?</summary>
+            <p>Verifique nosso painel de status em <strong>status.nexora.com</strong>. Se o problema persistir, entre em contato pelo chat ou telefone.</p>
+          </details>
+          <details>
+            <summary>Como acesso o app Nexora?</summary>
+            <p>Disponível na App Store (iOS) e Google Play (Android). Faça login com as mesmas credenciais da plataforma web.</p>
+          </details>
+        </div>
+      </article>
+
+    </main>
+
+    <footer id="site-footer">
+      <div id="footer-inner">
+
+        <div class="footer-col">
+          <h3>Nexora Educação</h3>
+          <p>Plataforma de ensino superior, pós-graduação e cursos livres com acesso 100% online.</p>
+          <p class="footer-cnpj">CNPJ: 00.000.000/0001-00</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul>
+            <li><i class="fa-solid fa-phone"></i> (11) 4000-0000</li>
+            <li><i class="fa-solid fa-phone"></i> 0800 000 0000 <span class="tag">Gratuito</span></li>
+            <li><i class="fa-solid fa-envelope"></i> suporte@nexora.com</li>
+            <li><i class="fa-solid fa-clock"></i> Seg–Sex, 8h–20h</li>
+            <li><i class="fa-solid fa-clock"></i> Sáb, 8h–14h</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Links úteis</h3>
+          <ul>
+            <li><a href="#">Calendário acadêmico</a></li>
+            <li><a href="#">Política de cancelamento</a></li>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Política de privacidade (LGPD)</a></li>
+            <li><a href="#">Portal do aluno</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Comunidade</h3>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i> @nexora</a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i> Nexora Educação</a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i> Nexora</a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div id="footer-bottom">
+        <p>© 2026 Nexora Educação. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

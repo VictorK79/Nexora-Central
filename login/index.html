@@ -1,42 +1,85 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login | Nexora</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="bg-loader" aria-hidden="true">
+      <div id="bg-spinner"></div>
+    </div>
     <div id="container">
       <div id="hero-section">
         <h1>Onde eficiência e inovação se encontram.</h1>
         <p>Tecnologia moderna que acompanha você em cada etapa do processo.</p>
         <div id="cards">
-          <div class="card"><h2>Segurança</h2><br><p>Seus dados protegidos com criptografia.</p></div>
-          <div class="card"><h2>Desempenho</h2><br><p>Sistema rápido e otimizado para o seu dia a dia.</p></div>
-          <div class="card"><h2>Controle</h2><br><p>Gerencie tudo com praticidade em um só lugar.</p></div>
+          <div class="card">
+            <h2>Segurança</h2>
+            <br />
+            <p>Seus dados protegidos com criptografia.</p>
+          </div>
+          <div class="card">
+            <h2>Desempenho</h2>
+            <br />
+            <p>Sistema rápido e otimizado para o seu dia a dia.</p>
+          </div>
+          <div class="card">
+            <h2>Controle</h2>
+            <br />
+            <p>Gerencie tudo com praticidade em um só lugar.</p>
+          </div>
         </div>
       </div>
       <form id="login-box">
+        <div id="top">
+          <h1>Faça login</h1>
+          <p class="subtitle">Preencha seus dados para continuar</p>
+        </div>
         <div id="email">
-          <label for="email">E-Mail</label>
-          <input name="email" type="text" / placeholder="Digite seu E-Mail">
+          <label for="emailInput">E-Mail</label>
+          <input
+            name="email"
+            type="email"
+            id="emailInput"
+            placeholder="Digite seu E-Mail"
+            autocomplete="email"
+          />
         </div>
         <div id="senha">
-          <label for="senha">Senha</label>
-          <input name="senha" type="password" / placeholder="Digite sua Senha">
-          <div id="passwordReveal">
-            <input type="checkbox" name="revealPassword" id="checkRevealPassword">
-            <label for="revealPassword">Mostrar Senha</label>
+          <label for="senhaInput">Senha</label>
+          <div class="password-box">
+            <input
+              name="senha"
+              type="password"
+              id="senhaInput"
+              placeholder="Digite sua Senha"
+              autocomplete="current-password"
+            />
+            <i
+              class="fa-solid fa-eye eye"
+              role="button"
+              tabindex="0"
+              aria-label="Mostrar senha"
+            ></i>
           </div>
         </div>
-        <button id="login" type="">Login</button>
+        <button id="login" type="submit">Login</button>
         <div id="extra">
-          <span>Não possui uma conta? <a href="../register/index.html">Registre-se</a></span>
-          <span><a href="#">Esqueci Minha Senha</a></span>
+          <span
+            >Não possui uma conta?
+            <a href="../register/index.html">Registre-se</a></span
+          >
+          <span><a href="../forgotPassword/index.html">Esqueci Minha Senha</a></span>
         </div>
       </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../users.js"></script>
     <script src="script.js"></script>
   </body>

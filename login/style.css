@@ -7,15 +7,50 @@
 body {
   overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background: #0d0680 no-repeat fixed url(blue-background.png);
   background-size: cover;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+#bg-loader {
+  position: fixed;
+  inset: 0;
+  background: #0d0680;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+}
+
+#bg-loader.oculto {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#bg-spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #4facfe;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 #container form {
   background: rgba(0, 0, 60, 0.5);
@@ -27,9 +62,9 @@ body {
   display: flex;
   flex-direction: column;
   color: white;
-  width: 30%;
-  height: 100%;
-  margin: 15% 11rem;
+  width: 35%;
+  height: auto;
+  margin-right: 8rem;
 }
 #email, #senha {
     display: flex;
@@ -42,9 +77,6 @@ body {
 #container form label {
     font-size: 1.5rem;
 }
-#container #passwordReveal label{
-  font-size: 1.3rem;
-}
 #container form input {
     margin-top: 0.4rem;
     font-size: 1.5rem;
@@ -56,9 +88,41 @@ body {
 #container form input:focus {
   box-shadow: 0 0 12px #4facfe;
 }
-#senha span, a {
+
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.password-box input {
+  width: 100%;
+  padding-right: 2.8rem;
+}
+
+.eye {
+  position: absolute;
+  right: 0.9rem;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.eye.animando {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.8);
+}
+#senha span, #senha a {
     transition: 0.2s;
     color: white;
+}
+#extra a{
+  transition: 0.2s;
 }
 #extra a:hover  {
     color: rgb(0, 55, 255);
@@ -90,6 +154,15 @@ form #extra {
   color: white;
   margin: 0 auto 2.5% auto;
 }
+#top h1 {
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  color: #d6d6ff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
 #cards {
   display: flex;
   gap: 5%;
@@ -103,33 +176,140 @@ form #extra {
   -webkit-backdrop-filter: blur(10.6px);
   padding: 2rem;
   width: 15rem;
-  height: 11rem;
+  height: auto;
   margin-top: 2rem;
   text-align: center;
   font-size: 1.3rem;
 }
-@media screen and (max-width: 768px) {
-  #container {
-    display: flex;
-    flex-direction: column-reverse;
+@media screen and (max-width: 1024px) {
+  #container form {
+    width: 45%;
+    margin-right: 3rem;
+    padding: 2rem;
   }
-  #login-box {
-    width: 90% !important;
-    padding: 1rem !important;
-    
+
+  #hero-section {
+    width: 45%;
+    margin-left: 2rem;
   }
+
+  .card {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+
   #cards {
-    flex-direction: column; 
+    flex-direction: column;
   }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+
+  #container {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  #container form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
   #hero-section {
     width: 90%;
-    font-size: 0.rem;
+    margin: 0 auto;
     text-align: center;
+    font-size: 0.95rem;
+  }
+
+  #hero-section h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  #cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  #container button {
+    width: 100%;
+    margin: 2rem auto 1.5rem auto;
+  }
+
+  form #extra {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
-@media screen and (max-width: 1024px) {
 
+.meu-swal-popup {
+  background: rgba(0, 0, 60, 0.75) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(11px) !important;
+  -webkit-backdrop-filter: blur(10.6px) !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+  color: white !important;
+  padding: 2rem !important;
+  animation: aparecerSwal 0.25s ease;
 }
-@media screen and (max-width: 1600px) {
 
+.meu-swal-title {
+  color: white !important;
+  font-size: 1.6rem !important;
+  font-weight: bold !important;
+}
+
+.meu-swal-text {
+  color: white !important;
+  font-size: 1.1rem !important;
+}
+
+.meu-swal-icon {
+  margin-top: 0.5rem !important;
+}
+
+.meu-swal-button {
+  background-color: #132cad !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+  padding: 0.7rem 1.5rem !important;
+  font-size: 1rem !important;
+  border: none !important;
+}
+
+.meu-swal-button:hover {
+  background-color: #0f2390 !important;
+}
+
+@keyframes aparecerSwal {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

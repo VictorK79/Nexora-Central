@@ -1,76 +1,164 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Conta | Nexora</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div id="bg-loader" aria-hidden="true">
+      <div id="bg-spinner"></div>
+    </div>
+    <div id="container">
+      <form id="register">
+        <h1>Crie sua conta</h1>
+        <p class="subtitle">Preencha seus dados para continuar</p>
+        <div id="name-row">
+          <div class="name-child">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Victor"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+          <div class="name-child">
+            <label for="sobrenome">Sobrenome</label>
+            <input
+              type="text"
+              name="sobrenome"
+              id="sobrenome"
+              placeholder="Lima"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+        </div>
+        <div id="email-row">
+          <label for="emailInput">E-Mail</label>
+          <input
+            type="email"
+            name="email"
+            id="emailInput"
+            placeholder="example@gmail.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+        <div id="address-row">
+          <div class="address-child">
+            <label for="endereco">Endereço</label>
+            <input
+              type="text"
+              name="endereco"
+              id="endereco"
+              placeholder="Rua São José"
+              autocomplete="street-address"
+              required
+            />
+          </div>
+          <div class="district-child">
+            <label for="bairro">Bairro</label>
+            <input
+              type="text"
+              name="bairro"
+              id="bairro"
+              placeholder="Centro"
+              required
+            />
+          </div>
+          <div class="number-child">
+            <label for="numero">Número</label>
+            <input
+              type="text"
+              name="numero"
+              id="numero"
+              placeholder="456"
+              inputmode="numeric"
+              required
+            />
+          </div>
+        </div>
+        <div id="passwords">
+          <label for="senha">Senha</label>
 
-</head>
+          <div class="password-box">
+            <input
+              name="senha"
+              type="password"
+              id="senha"
+              placeholder="Mínimo 8 caracteres"
+              minlength="8"
+              autocomplete="new-password"
+              required
+            />
+            <i
+              class="fa-solid fa-eye eye"
+              role="button"
+              tabindex="0"
+              aria-label="Mostrar senha"
+            ></i>
+          </div>
 
-<body>
-  <div id="container">
-    <form id="register">
-      <div id="name-row">
-        <div class="name-child">
-          <label>Nome</label>
-          <input type="text" name="nome" id="nome" placeholder="Victor">
-        </div>
-        <div class="name-child">
-          <label>Sobrenome</label>
-          <input type="text" name="sobrenome" id="sobrenome" placeholder="Lima">
-        </div>
-      </div>
-      <div id="email-row">
-        <label>E-Mail</label>
-        <input type="text" name="email" id="emailInput" placeholder="example@gmail.com">
-      </div>
-      <div id="address-row">
-        <div class="address-child">
-          <label>Endereço</label>
-          <input type="text" name="endereco" id="endereco" placeholder="Rua São José">
-        </div>
-        <div class="district-child">
-          <label>Bairro</label>
-          <input type="text" name="bairro" id="bairro" placeholder="Centro">
-        </div>
-        <div class="number-child">
-          <label>Número</label>
-          <input type="text" name="numero" id="numero" placeholder="456">
-        </div>
-      </div>
-      <div id="passwords">
-        <label>Senha</label>
+          <div id="passwordStrength">
+            <div id="strengthBar"></div>
+          </div>
 
-        <div class="password-box">
-          <input type="password" id="senha" placeholder="Crie senhas com no mínimo 8 caracteres.">
-          <i class="fa-solid fa-eye eye"></i>
-        </div>
-  
-        <p>Confirme Novamente a Senha</p>
+          <p id="strengthText" aria-live="polite" aria-atomic="true"></p>
 
-        <div class="password-box">
-          <input type="password" id="confirmar" placeholder="Crie senhas com no mínimo 8 caracteres.">
-          <i class="fa-solid fa-eye eye"></i>
-        </div>
-        <p id="statePassword">&nbsp</p>
-      </div>
-      <div id="terms">
-        <input type="checkbox" name="termos" id="termos" />
-        <label for="termos"><p>Eu aceito os&nbsp<a href="#">
-            termos e condições, política de privacidade e política de
-            cookies</a></p></label>
-      </div>
-      <button id="registre">Registre</button>
-      <span>Já possui uma conta?
-        <a href="../login/index.html">Faça Login</a></span>
-    </form>
-  </div>
-  <script src="../users.js"></script>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
+          <label for="confirmar" class="label-menor"
+            >Confirme novamente a senha</label
+          >
 
+          <div class="password-box">
+            <input
+              name="confirmar"
+              type="password"
+              id="confirmar"
+              placeholder="Confirme sua senha"
+              minlength="8"
+              autocomplete="new-password"
+              required
+            />
+            <i
+              class="fa-solid fa-eye eye"
+              role="button"
+              tabindex="0"
+              aria-label="Mostrar confirmação de senha"
+            ></i>
+          </div>
+
+          <p id="statePassword" aria-live="polite">&nbsp;</p>
+        </div>
+        <div id="terms">
+          <input type="checkbox" name="termos" id="termos" aria-required="true" required />
+          <label for="termos"
+            ><span
+              >Eu aceito os&nbsp;<a href="#">
+                termos e condições, política de privacidade e política de
+                cookies</a
+              ></span
+            ></label
+          >
+        </div>
+        <button id="registre" type="submit">Registre</button>
+        <span
+          >Já possui uma conta?
+          <a href="../login/index.html">Faça Login</a></span
+        >
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../users.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
